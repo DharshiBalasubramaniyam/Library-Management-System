@@ -1,0 +1,469 @@
+:root {
+    --main-color:rgb(27, 3, 240);
+    --white:rgb(255, 255, 255);
+    --third-color:rgb(209, 225, 255);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    color: var(--main-color);
+}
+
+body {
+    position: relative;
+    background-color: var(--main-color);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 18px;
+    background-color: var(--main-color);
+    display: flex;
+}
+
+::placeholder {
+    color: rgb(174, 174, 255);
+}
+
+/* common styles */
+form, .content {
+    display: flex;
+    padding: 20px 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 75%;
+} 
+h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+form .success-msg {
+    width: 100%;
+    color: green;
+    margin-bottom: 15px;
+    text-align: center;
+}
+form .error-msg {
+    width: 100%;
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+form input[type="text"],form input[type="email"], form input[type="date"] ,form input[type="password"], form select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 10px 0;
+    background: none;
+    border: 1.5px solid var(--main-color);
+    color: var(--main-color);
+    outline: none;
+    border-radius: 5px;
+}
+input[type="text"]:hover,input[type="email"]:hover, input[type="date"]:hover,form input[type="password"]:hover, select:hover {
+    box-shadow: 1px 1px 1px black;
+}
+input[type="text"]:focus,input[type="email"]:focus, input[type="date"]:focus,form input[type="password"]:focus, select:focus {
+    box-shadow: 0px 0px 1.8px black;
+}
+form .btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+input[type="submit"]{
+    padding: 7px 25px;
+    font-size: 16px;
+    width: 100px;
+    margin-top: 15px;
+    margin: 40px 0 0 15px;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--main-color);
+}
+input[type="submit"]:hover{
+    background-color: var(--white);
+    color: var(--main-color);
+}
+input[type="submit"]:active{
+    transform: scale(0.95);
+}
+input[type="submit"].clear {
+    background-color: var(--white);
+    color: var(--main-color);
+}
+input[type="submit"].clear:hover{
+    background-color: var(--main-color);
+    color: var(--white);
+}
+.logo {
+    width: 100%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 35px;
+    text-align: left;
+}
+.logo img {
+    height: 25px;
+    width: 25px;
+}
+.logo span {
+    margin-left: 10px;
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--third-color);
+}
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background-color:rgb(190, 190, 190);
+}
+::-webkit-scrollbar-thumb {
+    background-color:blue;
+    border-radius: 15px;
+}
+::-webkit-scrollbar:hover {
+    cursor: pointer;
+    background-color:rgb(1, 1, 157);
+}
+/* Side bar styles */
+
+.side-bar {
+    width: 22%;
+    background-color: var(--white);
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.side-bar .logo {
+    height: 10%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+.side-bar .logo span {
+    color: var(--main-color);
+}
+.side-bar ul {
+    width: 100%;
+}
+.side-bar ul li {
+    width: 100%;
+    margin:0 0 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.side-bar ul li a {
+    padding: 5%;
+    display: block;
+}
+.side-bar ul li.active {
+    background-color: var(--main-color);
+}
+.side-bar ul li.active a {
+    color: var(--third-color);
+}
+.side-bar ul li a {
+    font-size: 18px;
+    text-transform: capitalize;
+    color:var(--main-color);
+}
+.side-bar ul li:not(.active):hover {
+    background-color: var(--third-color);
+}
+
+.container .dashboard, .add, .issue, .return, .list{
+    background: linear-gradient(120deg, var(--white) 80%, var(--third-color));
+    width: 100%;
+    margin-left: 18px;
+    padding: 18px;
+    overflow-y: scroll;
+}
+
+/* Dashboard styles */
+.container .dashboard .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8%;
+}
+.container .dashboard .header .welcome {
+    font-size: 20px;
+}
+.container .dashboard h4{
+    height: 8%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.container .dashboard .cards {
+    width: 100%;
+    height:max-content;
+    padding: 18px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.container .dashboard .cards .card {
+    width: 275px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 0px 0 0;
+    margin-bottom: 15px;
+    margin-right: 11px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--third-color);
+    cursor: pointer;
+}
+.container .dashboard .cards .card h2 {
+    padding-left: 18px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.container .dashboard .cards .card .count {
+    font-size: 35px;
+    margin: 20px 0;
+    padding-left: 18px;
+}
+.container .dashboard .cards .card .more {
+    background-color: rgb(191, 191, 255);
+    width: 100%;
+    padding: 3px 18px;
+    visibility: hidden;
+}
+.container .dashboard .cards .card .more a {
+    color: var(--main-color);
+}
+.container .dashboard .cards .card:hover .more {
+    visibility: visible;
+}
+.container .dashboard .cards .card .more a:hover {
+    text-decoration: underline;
+}
+
+/* Add books styles and Add members styles */
+
+.container .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Issue books styles */
+.container .issue {
+    align-items: normal;
+}
+.container .issue  form {
+    justify-content: flex-start;
+    padding-top: 50px;
+}
+.container .issue  form label {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 17.5px;
+}
+
+/* return books styles */
+.container .return form {
+    justify-content: flex-start;
+    padding-top: 50px;
+}
+.container .return table {
+    border-collapse: collapse;
+}
+.container .return table th, td{
+    width: 220px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 15px 0;
+}
+.container .return .input-return-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 60%;
+}
+.container .return .input-box{
+    margin-top: 25px;
+}
+.container .return .input-return-book input[type="submit"] {
+    margin: 0;
+    margin-left: 15px;
+}
+
+/* book list styles */
+.container .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .table {
+    overflow-y: scroll;
+    width: 100%;
+}
+.container .list .content {
+    justify-content: flex-start;
+    padding-top: 25px;
+    width: 90%;
+}
+.container .list .top {
+    width: 100%;
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .list .top form{
+    width: 65%;
+}
+.container .list .top .search-bar {
+    flex-direction: row;
+    padding: 0;
+}
+.container .list .top .search-bar input {
+    margin: 5px;
+    font-size: 15px;
+}
+.container .list .top .search-bar input[type="text"]{
+    padding: 7px 8px;
+    font-size: 17px;
+    border-radius: 15px;
+}
+.container .list .top .add-book {
+    cursor: pointer;
+    padding: 0;
+    background-color: var(--main-color);
+    padding: 7px 15px;
+    border-radius: 15px;
+}
+.container .list .top .add-book a {
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--white);
+}
+.container .list .top .add-book a:hover {
+    text-decoration: underline;
+}
+.container .list table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.container .list table tr:nth-of-type(odd) {
+    background-color: var(--third-color);
+}
+.container .list table th{
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 400;
+}
+.container .list table th, td {
+    padding: 5px 0;
+}
+.container .list table td {
+    font-size: 14px;
+    height: 35px;
+    border-bottom: 1px solid var(--main-color);
+}
+.container .list table td a i:hover{
+    color: rgb(126, 126, 255);
+}
+
+/* home styles */
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, rgb(75, 75, 255), white);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+.home .login-box {
+    width: 60%;
+    height: 68%;
+    display: flex;
+    box-shadow: 0px 0px 10px rgb(28, 28, 197);
+}
+.home .login-box .left {
+    width: 50%;
+    height: 100%;
+    background-image: url("../images/login.jpg");
+    background-position:center;
+    background-size: cover;
+
+}
+.home .login-box .right {
+    width: 50%;
+    height: 100%;
+    background-color: var(--white);
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home .login-box .left .logo {
+    margin: 12px;
+}
+.home .login-box .left .logo span {
+    font-size: 20px;
+}
+.home .login-box .right p{
+    margin-top: -10px;
+    width: 85%;
+}
+.home .login-box .right h1{
+    font-size: 30px;
+}
+.home .login-box .right h2 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.home .login-box .right form {
+    /* background-color:blue; */
+    height: max-content;
+    padding: 0;
+    width: 85%;
+}
+.home form input[type="email"],
+.home form input[type="password"] {
+    border: 2px solid var(--main-color);
+}
+.home .login-box .right form input[type="submit"] {
+    width: 100%;
+    margin: 20px 0 ;
+    border-radius: 12px;
+}
+.home .login-box .right p {
+    text-align: center;
+    margin-top: 15px;
+}
