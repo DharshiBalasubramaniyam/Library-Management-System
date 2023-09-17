@@ -53,18 +53,18 @@
 <body>
     <div class="container">
         <div class="side-bar">
-        <div class="logo"><img src="images/logo.png" alt=""> <span>Library</span></div>
+            <div class="logo"><img src="images/logo.png" alt=""> <span>Library</span></div>
             <ul>
                 <li class="active"><a href="dashboard.php">dashboard</a></li>
-                <li><a href="addBook.php">add books</a></li>
-                <li><a href="addMember.php">add members</a></li>
-                <li><a href="issueBook.php">issue books</a></li>
-                <li><a href="returnBook.php">return books</a></li>
-                <li><a href="issuedBooks.php">View issued books</a></li>
-                <li><a href="returnedBooks.php">View returned books</a></li>
-                <li><a href="allBooks.php">view all books</a></li>
-                <li><a href="allMembers.php">view all members</a></li>
-                <li><a href="logout.php">log out</a></li>
+                <li><a href="./Books/addBook.php">add books</a></li>
+                <li><a href="./Members/addMember.php">add members</a></li>
+                <li><a href="./Issue/issueBook.php">issue books</a></li>
+                <li><a href="./Return/returnBook.php">return books</a></li>
+                <li><a href="./Issue/issuedBooks.php">View issued books</a></li>
+                <li><a href="./Return/returnedBooks.php">View returned books</a></li>
+                <li><a href="./Books/allBooks.php">view all books</a></li>
+                <li><a href="./Members/allMembers.php">view all members</a></li>
+                <li><a href="./Login/logout.php">log out</a></li>
             </ul>
         </div>
         <div class="dashboard">
@@ -77,21 +77,21 @@
                     <div class="overlay">
                         <h2>All Books</h2>
                         <div class="count"><?php echo $bookCount; ?></div>
-                        <div class="more"><a href="allBooks.php">See more info</a></div>
+                        <div class="more"><a href="./Books/allBooks.php">See more info</a></div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="overlay">
                         <h2>All Members</h2>
                         <div class="count"><?php echo $memberCount; ?></div>
-                        <div class="more"><a href="allMembers.php">See more info</a></div>
+                        <div class="more"><a href="./Members/allMembers.php">See more info</a></div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="overlay">
                         <h2>Issued Books</h2>
                         <div class="count"><?php echo $issueCount; ?></div>
-                        <div class="more"><a href="issuedBooks.php">See more info</a></div>
+                        <div class="more"><a href="./Issue/issuedBooks.php">See more info</a></div>
                     </div>
                 </div>
             </div>
@@ -101,28 +101,28 @@
                     <div class="overlay">
                         <h2>Issued Books</h2>
                         <div class="count"><?php echo $todayIssueCount; ?></div>
-                        <div class="more"><a href="issuedBooks.php">See more info</a></div>
+                        <div class="more"><a href="./Issue/issuedBooks.php">See more info</a></div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="overlay">
                         <h2>Returned Books</h2>
                         <div class="count"><?php echo $todayReturnCount; ?></div>
-                        <div class="more"><a href="returnedBooks.php">See more info</a></div>
+                        <div class="more"><a href="./Return/returnedBooks.php">See more info</a></div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="overlay">
                         <h2>New Books</h2>
                         <div class="count"><?php echo $todayBookCount; ?></div>
-                        <div class="more"><a href="allBooks.php">See more info</a></div>
+                        <div class="more"><a href="./Books/allBooks.php">See more info</a></div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="overlay">
                         <h2>New Members</h2>
                         <div class="count"><?php echo $todayMemberCount; ?></div>
-                        <div class="more"><a href="allMembers.php">See more info</a></div>
+                        <div class="more"><a href="./Members/allMembers.php">See more info</a></div>
                     </div>
                 </div>     
                     

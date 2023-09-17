@@ -2,7 +2,7 @@
 <?php
     session_start();
 
-    include('database.php');
+    include('../database.php');
     $error = "";
     $email=""; $password="";
 
@@ -20,7 +20,7 @@
                 $row = mysqli_fetch_assoc($result);
                 $_SESSION['first_name'] = $row['fname'];
                 $_SESSION['last_name'] = $row['lname'];
-                header('location: dashboard.php');
+                header('location: ../dashboard.php');
             }
         }
     }
@@ -31,14 +31,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>LMS-Login</title>
 </head>
 <body>
     <div class="home">
         <div class="login-box">
             <div class="left">
-            <div class="logo"><img src="images/logo.png" alt=""> <span>Library</span></div>
+            <div class="logo"><img src="../images/logo.png" alt=""> <span>Library</span></div>
 
             </div>
             <div class="right">

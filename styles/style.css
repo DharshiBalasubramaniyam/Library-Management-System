@@ -88,6 +88,7 @@ input[type="submit"]{
     margin: 40px 0 0 15px;
     border: 2px solid var(--main-color);
     cursor: pointer;
+    border-radius: 7px;
     color: var(--white);
     background-color: var(--main-color);
 }

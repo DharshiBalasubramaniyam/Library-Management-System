@@ -1,5 +1,5 @@
 <?php
-    include("database.php");
+    include("../database.php");
 
     $error = "";
     $id = ""; $fname = ""; $lname = ""; $email = ""; $phone = ""; $city = ""; $faculty = "";
@@ -68,24 +68,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Add Members</title>
 </head>
 <body>
     <div class="container">
         <div class="side-bar">
-        <div class="logo"><img src="images/logo.png" alt=""> <span>Library</span></div>
-            <ul>
-                <li><a href="dashboard.php">dashboard</a></li>
+        <div class="logo"><img src="../images/logo.png" alt=""> <span>Library</span></div>
+        <ul>
+                <li><a href="../dashboard.php">dashboard</a></li>
                 <li><a href="addBook.php">add books</a></li>
                 <li class="active"><a href="addMember.php">add members</a></li>
-                <li><a href="issueBook.php">issue books</a></li>
-                <li><a href="returnBook.php">return books</a></li>
-                <li><a href="issuedBooks.php">View issued books</a></li>
-                <li><a href="returnedBooks.php">View returned books</a></li>
-                <li><a href="allBooks.php">view all books</a></li>
-                <li><a href="allMembers.php">view all members</a></li>
-                <li><a href="logout.php">log out</a></li>
+                <li><a href="../Issue/issueBook.php">issue books</a></li>
+                <li><a href="../Return/returnBook.php">return books</a></li>
+                <li><a href="../Issue/issuedBooks.php">View issued books</a></li>
+                <li><a href="../Return/returnedBooks.php">View returned books</a></li>
+                <li><a href="../Books/allBooks.php">view all books</a></li>
+                <li><a href="../Members/allMembers.php">view all members</a></li>
+                <li><a href="../Login/logout.php">log out</a></li>
             </ul>
         </div>
         <div class="add">
