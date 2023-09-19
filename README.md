@@ -8,6 +8,8 @@ This is a library management system that stimulates basic functionalities of a l
 - View summary of issued and retured books
 - Search details of books and members
 - View dashboard
+
+
 For front end used HTML, CSS and JavaScript, for backend used PHP and Mysql
 
 ![Screenshot 2023-08-06 163144](https://github.com/DharshiBalasubramaniyam/Library-Management-System/assets/139672976/6805ed89-29cb-4cc8-8f54-b0bfbd630659)
